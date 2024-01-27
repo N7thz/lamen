@@ -122,7 +122,6 @@ export const Main = () => {
 
                                     <DatePicker />
                                 </div>
-
                                 <div>
                                     <Label>
                                         <Textarea placeholder="Write the tasks." />
