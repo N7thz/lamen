@@ -20,12 +20,15 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { DatePickerProps } from "@/types"
-import { CalendarComponent } from "./calendar-components"
+
+import { useFormContext } from "react-hook-form"
 
 export const DatePicker: React.FC<DatePickerProps> = ({ className, ...otherProps }) => {
 
-    const [date, setDate] = React.useState<Date>()
+    const { register } = useFormContext()
 
+    const [date, setDate] = React.useState<Date>()
+    
     return (
 
         <div
@@ -48,7 +51,10 @@ export const DatePicker: React.FC<DatePickerProps> = ({ className, ...otherProps
                 <PopoverContent className="flex w-auto flex-col space-y-2 p-2">
                     <Select
                         onValueChange={(value) =>
-                            setDate(addDays(new Date(), parseInt(value)))
+                            {
+                                setDate(addDays(new Date(), parseInt(value)))
+                                register(value)
+                            }
                         }
                     >
                         <SelectTrigger>
@@ -62,7 +68,10 @@ export const DatePicker: React.FC<DatePickerProps> = ({ className, ...otherProps
                         </SelectContent>
                     </Select>
                     <div className="rounded-md border">
-                        <CalendarComponent />
+                        <Calendar
+                            selected={date}
+                            onDayClick={value => setDate(value)}
+                        />
                     </div>
                 </PopoverContent>
             </Popover>
