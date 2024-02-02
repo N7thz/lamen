@@ -1,19 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { Tasks } from "@prisma/client";
+import { Task } from "@prisma/client";
 
 export async function GET() {
 
-    return NextResponse.json({ message: "Hello word dos guri" })
+    const response = await prisma.task.findMany()
+
+    console.log(response)
+
+    return NextResponse.json({ data: response })
 }
 
 export async function POST(request: NextRequest) {
 
-    const body: Tasks = await request.json()
+    const body: Task = await request.json()
 
-    console.log(body)
-
-    await prisma.tasks.create({
+    await prisma.task.create({
         data: body
     })
 

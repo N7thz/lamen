@@ -8,8 +8,8 @@ import {
 
 import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react"
-import { ScrollArea } from "./ui/scroll-area"
 import { DialogBlock } from "./dialog"
+import { AllTaksContent } from "./all-taks-content"
 
 export const CardBlock = () => {
 
@@ -17,7 +17,7 @@ export const CardBlock = () => {
 
         <Card
             className="border-violet-500 m-4 w-2/3 min-h-[760px] flex flex-col
-        items-center bg-zinc-100 dark:bg-zinc-950 my-8 mx-4 rounded-lg"
+            items-center bg-zinc-100 dark:bg-zinc-950 my-8 mx-4 rounded-lg"
         >
             <CardHeader>
                 <CardTitle>
@@ -44,15 +44,10 @@ export const CardBlock = () => {
                         height={20}
                     />
                 </div>
-                <ScrollArea
-                    className="h-full w-full rounded-lg p-4 mt-20 text-center"
-                >
-                    you dont have any task
-                </ScrollArea>
+                <AllTaksContent />
             </CardContent>
 
             <CardFooter>
-
                 <DialogBlock />
             </CardFooter>
         </Card>

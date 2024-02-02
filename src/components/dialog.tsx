@@ -12,7 +12,6 @@ export const DialogBlock = () => {
     return (
 
         <Dialog>
-
             <DialogTrigger asChild>
                 <Button>Add Task</Button>
             </DialogTrigger>

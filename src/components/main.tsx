@@ -29,7 +29,6 @@ export const Main = () => {
                 </Card>
                 <CalendarComponent />
             </Card>
-
             <CardBlock />
         </div >
     )
