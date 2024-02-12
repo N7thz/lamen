@@ -1,24 +1,12 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { Task } from "@prisma/client"
-import axios from "axios"
 import { ScrollArea } from "./ui/scroll-area"
 import { TaskCard } from "./task-card"
+import { useTask } from "@/context/task-context"
 
 export const AllTaksContent = () => {
 
-    const [tasks, setTasks] = useState<Task[]>()
-
-    useEffect(() => {
-
-        axios.get("/api/hello")
-            .then(res => {
-
-                setTasks(res.data.data)
-            })
-            .catch(err => console.log(err.data))
-    }, [])
+    const { tasks } = useTask()
 
     if (tasks) {
 
@@ -33,10 +21,13 @@ export const AllTaksContent = () => {
                         tasks.length === 0
                             ? " you dont have any task"
                             : tasks.map(task =>
-                                <TaskCard
+
+                                <div
                                     key={task.id}
-                                    task={task}
-                                />
+                                    className="w-full flex justify-center items-center"
+                                >
+                                    <TaskCard task={task} />
+                                </div>
                             )
                     }
                 </div>

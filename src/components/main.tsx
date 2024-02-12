@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/card"
 import { CalendarComponent } from "@/components/calendar-components"
 import { CardBlock } from "./card"
+import { TasksForToday } from "./tasks-for-today"
 
 export const Main = () => {
 
@@ -17,16 +18,16 @@ export const Main = () => {
                 flex flex-col gap-4 justify-around items-center
                 my-8 mx-4 rounded-lg border-violet-500"
             >
-                <Card>
+                <CardContent
+                    className="border-none"
+                >
                     <CardHeader>
                         <CardTitle>
-                            Taks for Today:
+                            Tasks for Today:
                         </CardTitle>
                     </CardHeader>
-                    <CardContent>
-                        You have no tasks for today
-                    </CardContent>
-                </Card>
+                    <TasksForToday />
+                </CardContent>
                 <CalendarComponent />
             </Card>
             <CardBlock />

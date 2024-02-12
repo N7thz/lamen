@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import { Fira_Code } from "next/font/google"
 import { ThemeProvider } from "@/context/theme-provider"
+import { TaskProvider } from "@/context/task-context"
+import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const firaCode = Fira_Code({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
 
@@ -19,13 +20,15 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={inter.className}
+        className={firaCode.className}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
         >
-          {children}
+          <TaskProvider>
+            {children}
+          </TaskProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -38,8 +38,7 @@ export const CardBlock = () => {
                         placeholder="Search a task"
                     />
                     <Search
-                        className="absolute top-[26%] right-1 
-                    text-zinc-50/40 cursor-pointer hover:text-zinc-50"
+                        className="absolute top-[26%] right-1 text-zinc-50/40 cursor-pointer hover:text-zinc-50"
                         width={20}
                         height={20}
                     />

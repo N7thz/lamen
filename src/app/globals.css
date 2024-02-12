@@ -1,12 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* {
-  font-family: 'Fira Code', monospace;
-}
 
 @layer base {
   :root {
@@ -69,6 +63,14 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer components {
+
+  .backgroundImage {
+    background: url("https://i.pinimg.com/originals/40/42/95/404295ce8842c829f8e171ec8abdbcaf.jpg") no-repeat fixed;
+    background-size: cover;
   }
 }
 

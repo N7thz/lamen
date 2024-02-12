@@ -6,8 +6,6 @@ export async function GET() {
 
     const response = await prisma.task.findMany()
 
-    console.log(response)
-
     return NextResponse.json({ data: response })
 }
 

@@ -1,18 +1,18 @@
-import { FC, useState } from "react"
+import { ComponentProps, FC, useState } from "react"
 import { Task } from "@prisma/client"
 import { tv } from "tailwind-variants"
 import { Checkbox } from "./ui/checkbox"
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card"
-import { Trash, Edit } from "lucide-react"
-
-interface TaskCardProps {
+import { ButtonEdit } from "./button-edit"
+import { ButtonTrash } from "./button-trash"
+interface TaskCardProps extends ComponentProps<"div"> {
 
     task: Task
 }
 
 const taskVariant = tv({
 
-    base: "w-2/3 duration-150 hover:scale-95",
+    base: "w-2/3 duration-150 hover:scale-95 cursor-pointer",
     variants: {
 
         mode: {
@@ -27,18 +27,7 @@ const taskVariant = tv({
     }
 })
 
-const button = tv({
 
-    base: "cursor-pointer duration-300 p-1 rounded-sm hover:scale-105",
-    variants: {
-
-        mode: {
-
-            default: "bg-violet-500 hover:bg-violet-700/80",
-            checked: "bg-zinc-50 text-violet-500 hover:bg-zinc-100/80"
-        }
-    }
-})
 
 const titleVariant = tv({
 
@@ -107,39 +96,16 @@ export const TaskCard: FC<TaskCardProps> = ({ task }) => {
                         className="w-7 h-7 p-1"
                     />
 
-                    <Trash
-                        width={28}
-                        height={28}
-                        className={
-
-                            isChecked
-                                ? button({
-
-                                    mode: "checked"
-                                })
-                                : button({
-
-                                    mode: "default"
-                                })
-                        }
+                    <ButtonEdit
+                        task={task}
+                        isChecked={isChecked}
                     />
 
-                    <Edit
-                        width={28}
-                        height={28}
-                        className={
-
-                            isChecked
-                                ? button({
-
-                                    mode: "checked"
-                                })
-                                : button({
-
-                                    mode: "default"
-                                })
-                        }
+                    <ButtonTrash
+                        task={task}
+                        isChecked={isChecked}
                     />
+
                 </div>
             </CardContent>
         </Card>
