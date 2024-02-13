@@ -9,8 +9,8 @@ export const TasksForToday = () => {
 
     const { tasks } = useTask()
     const tasksForToday = tasks?.filter(
-        task => format(task.task_date, "PPP") == format(new Date, "PPP"))
-
+        task => format(task.task_date, "PPP") === format(new Date, "PPP"))        
+    
     return (
 
         <ScrollArea

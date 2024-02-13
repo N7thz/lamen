@@ -27,8 +27,7 @@ export const CardBlock = () => {
 
             <CardContent
                 className="w-11/12 h-5/6 m-2 rounded-lg border bg-card 
-            text-card-foreground shadow-sm
-            flex flex-col justify-center items-center relative"
+                text-card-foreground shadow-sm flex flex-col justify-center items-center relative"
             >
                 <AllTaksContent />
             </CardContent>

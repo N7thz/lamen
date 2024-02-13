@@ -23,7 +23,7 @@ export const Main = () => {
                 >
                     <CardHeader>
                         <CardTitle>
-                            Tasks for Today:
+                            Tasks for Tomorrow:
                         </CardTitle>
                     </CardHeader>
                     <TasksForToday />
