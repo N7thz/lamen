@@ -30,19 +30,6 @@ export const CardBlock = () => {
             text-card-foreground shadow-sm
             flex flex-col justify-center items-center relative"
             >
-                <div
-                    className="absolute top-4 m-auto w-2/3"
-                >
-                    <Input
-                        className="relative"
-                        placeholder="Search a task"
-                    />
-                    <Search
-                        className="absolute top-[26%] right-1 text-zinc-50/40 cursor-pointer hover:text-zinc-50"
-                        width={20}
-                        height={20}
-                    />
-                </div>
                 <AllTaksContent />
             </CardContent>
 
