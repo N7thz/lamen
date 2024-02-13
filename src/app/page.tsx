@@ -1,8 +1,9 @@
-
 import { Header } from "@/components/header"
 import { Main } from "@/components/main"
 
-export default function Home() {
+export default async function Home() {
+
+  await new Promise(resolve => setTimeout(resolve, 2000))
 
   return (
 

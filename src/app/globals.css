@@ -69,7 +69,7 @@
 @layer components {
 
   .backgroundImage {
-    background: url("https://i.pinimg.com/originals/40/42/95/404295ce8842c829f8e171ec8abdbcaf.jpg") no-repeat fixed;
+    background: url("https://pixeljoint.com/files/icons/full/restless.gif") no-repeat fixed;
     background-size: cover;
   }
 }

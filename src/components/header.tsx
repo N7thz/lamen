@@ -7,7 +7,7 @@ export const Header = () => {
 
         <header
             className="w-full h-16 flex justify-between items-center 
-            bg-zinc-100 dark:bg-zinc-950"
+            bg-zinc-100 dark:bg-zinc-950 border-b-2 border-violet-500"
         >
             <ModeToggle
                 className="ml-4"
