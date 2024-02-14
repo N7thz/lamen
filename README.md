@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lamen - Aplicativo de Lista de Tarefas
 
-## Getting Started
+Lamen é um aplicativo simples de lista de tarefas desenvolvido para ajudar os usuários a gerenciar suas tarefas diárias de forma eficiente. Com uma interface intuitiva e recursos essenciais, Lamen torna a organização de tarefas uma tarefa fácil e sem complicações.
 
-First, run the development server:
+## Recursos Principais
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Adicionar Tarefas:** Adicione facilmente novas tarefas à sua lista com um simples toque.
+- **Marcar Concluído:** Marque as tarefas concluídas para acompanhar seu progresso.
+- **Editar Tarefas:** Edite detalhes das tarefas existentes conforme necessário.
+- **Excluir Tarefas:** Remova as tarefas que não são mais relevantes para manter sua lista limpa.
+
+## Instalação
+
+Para começar a usar o Lamen, siga estas etapas simples:
+
+1. Clone o repositório do Lamen em sua máquina local:
+
+```bash 
+git clone https://github.com/seu-usuario/lamen.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navegue até o diretório do projeto e siga os seguintes comandos:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash 
+cd lamen
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash 
+npm i
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash 
+npm run dev
+```
